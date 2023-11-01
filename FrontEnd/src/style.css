@@ -1,0 +1,99 @@
+.ShtoDirector {
+    padding: 10px 50px 10px 50px;
+    background-color: #6a2020;
+border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px white;
+}
+
+input[type="text"] {
+    border: none;
+    padding: 10px 40px 10px 36px;
+    /* border: 5px; */
+    border-radius: 3px;
+}
+input[type="number"] {
+    border: none;
+    padding: 10px 40px 10px 36px;
+    /* border: 5px; */
+    border-radius: 3px;
+
+}
+
+button{
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 6px;
+    background-color: lightgray;
+    /* font-family: Rubik; */
+    margin-top:10px
+
+}
+span{
+  color:red;
+}
+button:hover{
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 6px;
+    background-color: lightgray;
+    /* font-family: Rubik; */
+    margin-top:10px;
+    cursor: pointer;
+}
+.form-center {
+    flex: 1;  /* occupy remaining height after NavBar */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+:root {
+    --arrow-bg: rgba(255, 255, 255, 0.3);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: black;
+    --select-bg: rgba(255, 255, 255, 0.2);
+  }
+  
+  select {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    width: 15rem;
+    padding: 1rem 4rem 1rem 1rem;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+      linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    color: black;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    &::-ms-expand {
+      display: none;
+    }
+    &:focus {
+      outline: none;
+    }
+    option {
+      color: inherit;
+      background-color: var(--option-bg);
+    }
+  }
+  
