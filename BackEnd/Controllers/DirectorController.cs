@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using MovieDetyra.Models;
+using MovieDetyra.Models.DTO;
+using MovieDetyra.Models.Entities;
 
 namespace MovieDetyra.Controllers
 {
@@ -9,19 +11,21 @@ namespace MovieDetyra.Controllers
     [Route("api/Directors")]
     public class DirectorController : Controller
     {
+        private readonly IMapper _mapper;
         private readonly ApplicationDbContext _context;
-        public DirectorController(ApplicationDbContext context)
+        public DirectorController(ApplicationDbContext context, IMapper mapper)
         {
+            _mapper = mapper??throw new ArgumentNullException(nameof(mapper));
             _context = context;
         }
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Director>>> GetDirectors()
+        public async Task<ActionResult<IEnumerable<DirectorDTO>>> GetDirectors()
         {
             var directors = await _context.directors.ToListAsync();
-
-            return Ok(directors);
+            var directorsDTO = _mapper.Map<IEnumerable<DirectorDTO>>(directors);
+            return Ok(directorsDTO);
         }
 
 

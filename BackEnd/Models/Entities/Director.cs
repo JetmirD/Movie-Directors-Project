@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace MovieDetyra.Models
+namespace MovieDetyra.Models.Entities
 {
     public class Director
     {

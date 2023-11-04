@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MovieDetyra.Models;
+using MovieDetyra.Models.Entities;
 
 namespace MovieDetyra.Controllers
 {

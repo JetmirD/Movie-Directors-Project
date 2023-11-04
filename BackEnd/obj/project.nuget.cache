@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WLGKdPR5A8US+UKzUpmdHQjhQtMCPsTfp6gRiyM9C1K1O0Elzjf+1Wnrn15rpWw3WMAzVU7/9LCUMqwtCY+uPg==",
+  "dgSpecHash": "L0B/Ws724M/6qmF3r0NkZaijIXQZex/kfWfQO3rtnt5lnq4n3B5N9oDlTXtLQl1PYC416RZt0y7/bLBviVuBNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jetmi\\source\\repos\\MovieDetyra\\MovieDetyra.csproj",
+  "projectFilePath": "C:\\Users\\jetmi\\Desktop\\MovieDirectorsProject\\BackEnd\\MovieDetyra.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jetmi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\jetmi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\jetmi\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\jetmi\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\jetmi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

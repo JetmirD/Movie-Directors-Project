@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jetmi\\source\\repos\\MovieDetyra\\MovieDetyra.csproj": {}
+    "C:\\Users\\jetmi\\Desktop\\MovieDirectorsProject\\BackEnd\\MovieDetyra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jetmi\\source\\repos\\MovieDetyra\\MovieDetyra.csproj": {
+    "C:\\Users\\jetmi\\Desktop\\MovieDirectorsProject\\BackEnd\\MovieDetyra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jetmi\\source\\repos\\MovieDetyra\\MovieDetyra.csproj",
+        "projectUniqueName": "C:\\Users\\jetmi\\Desktop\\MovieDirectorsProject\\BackEnd\\MovieDetyra.csproj",
         "projectName": "MovieDetyra",
-        "projectPath": "C:\\Users\\jetmi\\source\\repos\\MovieDetyra\\MovieDetyra.csproj",
+        "projectPath": "C:\\Users\\jetmi\\Desktop\\MovieDirectorsProject\\BackEnd\\MovieDetyra.csproj",
         "packagesPath": "C:\\Users\\jetmi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jetmi\\source\\repos\\MovieDetyra\\obj\\",
+        "outputPath": "C:\\Users\\jetmi\\Desktop\\MovieDirectorsProject\\BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jetmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[6.0.12, )"

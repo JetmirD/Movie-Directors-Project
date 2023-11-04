@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MovieDetyra.Models;
+using MovieDetyra.Models.Entities;
+
 namespace MovieDetyra
 {
     public class ApplicationDbContext : DbContext
