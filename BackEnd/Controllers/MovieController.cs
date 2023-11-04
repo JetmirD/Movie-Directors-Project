@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MovieDetyra.Models.DTO;
 using MovieDetyra.Models.Entities;
 
 namespace MovieDetyra.Controllers
@@ -8,20 +10,21 @@ namespace MovieDetyra.Controllers
     [Route("api/Movie")]
     public class MovieController : Controller
     {
-       
-
+        private readonly IMapper _mapper;
         private readonly ApplicationDbContext _context;
-        public MovieController(ApplicationDbContext context)
+        public MovieController(ApplicationDbContext context, IMapper mapper)
         {
+            _mapper = mapper?? throw new ArgumentNullException(nameof(mapper));
             _context = context;
         }
     
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
+        public async Task<ActionResult<IEnumerable<MovieDTO>>> GetMovies()
         {
             var movies = await _context.movies.Include(b => b.Director).ToListAsync();
-            return Ok(movies);
+            var moviesDTO = _mapper.Map<IEnumerable<MovieDTO>>(movies);
+            return Ok(moviesDTO);
         }
 
       
@@ -48,12 +51,13 @@ namespace MovieDetyra.Controllers
             return Ok(filteredAuthors);
         }
         [HttpPost]
-        public async Task<ActionResult<Movie>>CreateMovies(Movie movie)
+        public async Task<ActionResult<MovieDTO>>CreateMovies(MovieDTO movieDTO)
         {
+            var movie = _mapper.Map<Movie>(movieDTO);
             _context.movies.Add(movie);
             await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetMovies), new { id = movie.MovieId }, movie);
+            var newMovie = _mapper.Map<MovieDTO>(movie);
+            return CreatedAtAction(nameof(GetMovies), new { id = movie.MovieId }, newMovie);
         }
     }
 }

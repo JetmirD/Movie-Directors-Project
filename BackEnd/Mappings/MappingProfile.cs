@@ -7,7 +7,8 @@ namespace MovieDetyra.Mappings
     public class MappingProfile : Profile
     {
         public MappingProfile(){
-            CreateMap<Director, DirectorDTO>();
+            CreateMap<Director, DirectorDTO>().ReverseMap();
+            CreateMap<Movie, MovieDTO>().ReverseMap();
         }
     }
 }

@@ -30,11 +30,16 @@ namespace MovieDetyra.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult<Director>> PostDirectors(Director director)
+        public async Task<ActionResult<DirectorDTO>> PostDirectors(DirectorDTO directorDTO)
         {
+            var director = _mapper.Map<Director>(directorDTO);
+
             _context.directors.Add(director);
+
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetDirectors), new { id = director.DirectorId }, director);
+
+            var newDirector = _mapper.Map<DirectorDTO>(director);
+            return CreatedAtAction(nameof(GetDirectors), new { id = director.DirectorId }, newDirector);
         }
 
         [HttpPut("{id}")]
