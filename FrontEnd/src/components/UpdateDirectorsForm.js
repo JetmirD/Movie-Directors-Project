@@ -32,14 +32,19 @@ function UpdateDirector() {
 
             <label>Director ID:</label>
             <input type="number" value={directorID} onChange={e => setDirectorId(e.target.value)} />
+            <br/>
 
             <label>Director Name:</label>
             <input type="text" value={directorName} onChange={e => setDirectorName(e.target.value)} />
+            <br/>
 
             <label>Birth Year:</label>
             <input type="number" value={birthYear} onChange={e => setBirthYear(e.target.value)} />
+            <br/>
 
             <button onClick={updateDirectorData}>Update Director</button>
+            <br/>
+            <br/>
 
             {message && <p>{message}</p>}
         </div>
